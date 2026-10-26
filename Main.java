@@ -1,35 +1,17 @@
-public class Main {
+public class Vehicle {
+    protected String brand;
+    protected String model;
+    protected int year;
 
-    public static void main(String[] args) {
+    public Vehicle(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
 
-        Vehicle vehicle1 = new Vehicle();
-        Vehicle vehicle2 = new Vehicle();
-        Vehicle vehicle3 = new Vehicle();
-
-        vehicle1.brand = "Toyota";
-        vehicle1.model = "Corolla";
-        vehicle1.year = 2020;
-
-        vehicle2.brand = "Honda";
-        vehicle2.model = "Civic";
-        vehicle2.year = 1995;
-
-        vehicle3.brand = "Ford";
-        vehicle3.model = "Ranger";
-        vehicle3.year = 2015;
-
-        vehicle1.displayInfo();
-        System.out.println("Age: " + vehicle1.calculateAge());
-        System.out.println("Vintage: " + vehicle1.isVintage());
-        System.out.println();
-
-        vehicle2.displayInfo();
-        System.out.println("Age: " + vehicle2.calculateAge());
-        System.out.println("Vintage: " + vehicle2.isVintage());
-        System.out.println();
-
-        vehicle3.displayInfo();
-        System.out.println("Age: " + vehicle3.calculateAge());
-        System.out.println("Vintage: " + vehicle3.isVintage());
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
     }
 }
